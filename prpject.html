@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home | Trax - One Page and Multipage Parallax Drupal 10</title>
+
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: 0;
+			font-family: sans-serif;
+			text-decoration: none;
+
+		}
+
+		 html{
+          	scroll-behavior: smooth; 
+          }
+		.menu{
+			display: flex;
+			justify-content:flex-start;
+			align-items: center;
+			/*gap :25rem; */
+		}
+
+		.menu h1 {
+			color: #fff;
+		}
+
+		nav a {
+			margin-left: 2.9rem;
+			gap : 25px;
+			color: #fff;
+			font-size:1.5rem; 
+		}
+
+		span{
+			color: blue;
+		}
+
+		.img1{
+			width: 100%;
+			height: 100vh;
+			position: absolute;
+			top: 0;
+			z-index: -300;
+	   }
+
+	   .img2{
+	   		width: 100%;
+			height: 100vh;
+			position: absolute;
+			top: 100%;
+			z-index: -200;
+	   }
+	   .img3{
+	   		width: 100%;
+			height: 100vh;
+			position: absolute;
+			top: 200%;
+			z-index: -200;
+		}
+
+
+	   .slogan h1{ 
+	   	color:#fff;
+	   	justify-content: center;
+	   	padding-top: 5rem;
+	   	text-align: center;
+
+	   }
+
+	   	.slogan h2{
+	   	color:red; 
+	   	font-size: 2.5rem;
+	   	justify-content: center;
+	   	padding-top: 8rem;
+	   	text-align: center;
+
+	   }
+
+	   /*div {
+	   	width: 35px;
+	   	height: 5px;
+	   	background-color: black;
+	   	margin: 6px 0;
+	   	text-align: right;
+	   }*/
+         
+
+          .cards{
+          	display: flex;
+          	gap: 2rem;
+          	flex-wrap: wrap;
+          }
+
+          .card{
+          	flex: 1 1 18.3rem;
+          	width: 300px;
+          	height: 300px;
+          	background:#CC2936;
+          	border-radius: 2rem;
+          	/*display: flex;*/
+          	justify-content: center;
+          	align-items: center;
+          	flex-direction: column;
+          	gap:1rem;
+          	padding: 1rem 2.5rem;
+          	transition: 0.5s ease; 
+          }
+
+          .card h2 {
+          	margin-left: 26px;
+          	justify-content: center;
+          	text-align: center;
+          	float: center;
+          	font-size:3.5rem;  
+          }
+
+          .card p {
+          	margin-top: 25px;
+          	font-size:1rem;
+          	text-align: center;
+          }
+
+          .card button {
+          	margin-left: 25px;
+          	margin-top: 25px;
+          	font-size:1rem; 
+          	padding: 1rem 3rem;
+          	background:#2A4C65 #9065D1 #28CFFD; 
+          	float: center;
+          	border-radius: 2rem;
+          	border:2px solid #750e21;
+          	box-shadow: 0 0 15px #1a1a1a;
+          	transition: 0.2s ease;
+          }
+
+          .card:hover{
+          	border:1px; 
+          }
+          .card button:hover{
+          	background:#F9D884; 
+          }
+          .box{
+          	margin-left: 8.5rem;
+          	background-color: #5e2563;
+          	height: 19rem;
+          	width: 41rem;
+          	display: flex;
+          	/*justify-content: center;*/
+          	align-items: center;
+          	/*position:absolute;*/
+          }
+          .ment{
+          	/*font-size:0px; */
+          	padding: 0px 0px 0px 12px;
+          	flex-direction: column;
+          	display: flex;
+          	margin-top: 0;
+          	justify-content: space-between;
+          	/*background-color: blue;*/
+          	height: 13rem;
+          	width: 9rem;
+          	/*align-items: center;
+          	justify-content: center;*/
+
+          }
+
+          .ment h1{
+          	font-size:16px; 
+          	color: #fff;
+          }
+
+          .box p{
+          	color: #fff;
+          	/*margin-top: 25px;*/
+          }
+
+          .ment2{
+          	/*font-size:0px; */
+          	padding: 0px 0px 0px 12px;
+          	flex-direction: column;
+          	display: flex;
+          	margin-top: 0;
+          	justify-content: space-between;
+          	/*background-color: blue;*/
+          	height: 13rem;
+          	width: 9rem;
+         	 }
+
+
+          .ment2 h1{
+          	font-size:16px; 
+          	color: #fff;
+          }
+
+            .ment3{
+          	/*font-size:0px; */
+          	padding: 0px 0px 0px 12px;
+          	flex-direction: column;
+          	display: flex;
+          	margin-top: 0;
+          	justify-content: space-between;
+          	/*background-color: blue;*/
+          	height: 13rem;
+          	width: 9rem;
+         	 }
+
+         	     .ment3 h1{
+          	font-size:16px; 
+          	color: #fff;
+          }
+
+               .ment4{
+          	/*font-size:0px; */
+          	padding: 0px 0px 0px 12px;
+          	flex-direction: column;
+          	display: flex;
+          	margin-top: 0;
+          	justify-content: space-between;
+          	/*background-color: blue;*/
+          	height: 13rem;
+          	width: 9rem;
+         	 }
+
+         .ment4 h1{
+          	font-size:16px; 
+          	color: #fff;
+          }
+
+          .slogan2{
+          	margin-top: 12rem;
+          	padding-left: 25px;
+          	animation: linear;
+          	animation-direction: alternate-reverse;
+
+          }
+
+          .slogan2 h1{
+          	font-size:2rem;
+          	color: #fff;
+          }
+
+          .slogan2 h2{
+          	font-size: 18px;
+          	color: #fff;
+          }
+
+          .slogan2 button{
+
+          	margin-left: 25px;
+          	margin-top: 25px;
+          	font-size:1rem; 
+          	padding: 1rem 3rem;
+          	background:#637ffd; 
+          	float: center;
+          	border-radius: 2rem;
+          	border:2px solid #750e21;
+          	box-shadow: 0 0 15px #d3208b;
+          	transition: 0.2s ease;
+
+          }
+
+          .slogan2 button:hover{
+          	background:#F9D884;
+          	} 
+
+          	.head h1{
+         color:#000;
+	   	 justify-content: center;
+	   	 padding-top: 5rem;
+	   	 text-align: center;
+	   	 font-family: sans-serif;
+	   	 font-size: 2rem;
+	   	}
+	   	.head h2{
+	   		 color:#000;
+	   	 justify-content: center;
+	   	 padding-top: 5rem;
+	   	 text-align: center;
+	   	 font-family: sans-serif;
+	   	 font-size: 5rem
+
+	   	}
+
+	   	.heder-button{
+ 		    font-color:#fff; 
+ 		    text-decoration-color: #fff;
+  	}
+	   	.head button{
+	   		margin-left: 7rem;
+          	margin-top: 25px;
+          	font-size:2rem; 
+          	padding: 1rem 3rem;
+          	background:#fff; 
+            float: center;
+          	border-radius: 50%;
+          	border:2px r #750e21;
+          	/*box-shadow: 0 0 15px #d3208b;*/
+          	line-height: 3;
+          	width: 1;
+          	text-align: center;
+             /*   transition: 0.2s ease;
+   	}
+
+   	
+</style>
+</head>
+<body>
+      
+	<header>
+
+	<div class="menu">
+		<h1>Trax<span>.</span></h1>
+		<nav>
+		<a class="Active" href="home">Home</a>
+		<a href="About">About</a>
+		<a href="Pages">Pages</a>
+		<a href="Blog">Blog</a>
+		<a href="Gallery">Gallery</a>
+		<a href="#">Contant us</a>
+		</nav>
+	<!-- <div class="box"></div> -->
+	</div>
+
+</header>
+	<div class="box">
+		<div class="ment">
+		<h1>Layout 1</h1>
+		<p>Standard Version</p>
+		<p>Creative Agency</p>
+		<p>Homepage Grey</p>
+		<p>Homepage Light</p>
+	</div>
+	<div class="ment2">
+		<h1>Layout 2</h1>
+		<p>Classic Startup</p>
+		<p>HomePage Flat</p>
+		<p>Innovative Classic</p>
+		<p>Innovative</p>	
+	</div>
+	<div class="ment3">
+		<h1>Layout 3</h1>
+		<p>Bottom Nav</p>
+		<p>Minimal Grey</p>
+		<p>One Page</p>
+		<p>Single Index Bottom Nav</p>	
+
+	</div>
+	<div class="ment4">
+		<h1>Layout 4</h1>
+		<p>Center Logo</p>
+		<p>Design Studio</p>
+		<p>Interactive Particle</p>
+		<p>Modern Agency</p>	
+
+	</div>
+	</div>
+<!-- </header> -->
+<section>
+	<div class="slogan">
+		<h1>The Ultimate<P><span>Creative Buissness</span></P>In Market</h1>
+		<h2>Let's Create<p><span>Deep creativity</span></p>In Market</h2>
+	</div>
+</section>
+	<img class="img1" src='C:\Users\abc\Downloads\snowy-mountain-peak-starry-galaxy-majesty-generative-ai.jpg' >
+	<div class="cards">
+	       <div class="card">
+	       	<h3>SEO OPTIMIZED</h3>
+	       	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	       	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	       	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	       	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	       	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat</p>
+	       	<button>Read More</button>
+	       	
+	       </div>
+	          <div class="card">
+	       	<h3>Well Documented</h3>
+	       	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	       	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	       	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	       	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	       	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat</p>
+	       	<button>Read More</button>
+	       	
+	       </div>
+	          <div class="card">
+	       	<h3>Fully Responsive</h3>
+	       	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	       	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	       	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	       	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	       	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat</p>
+	       	<button>Read More</button>
+	       	
+	       </div>
+	   </div>
+	   	<img class="img2" src="C:\Users\abc\Music\Pictures\Photoshop Images\BACKGROUNDS\20171214222305.jpg">
+
+
+            <section>
+            	<div class="slogan2">
+            		<h1>Lets take your <span>Business</span> to Next Level</h1><br>
+            		<h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            		consequat. Duis aute irure dolor in reprehenderit in voluptate velit ess
+            	</h2>
+            	<button>Learn More</button>
+            	</div>
+            </section>
+            <img class="img3" src="C:\Users\abc\Downloads\person-using-laptop.jpg">
+
+            <section>
+            	<div class="head">
+            		<h1>Quisque tellus risus,adipisci</h1>
+            		<h2>Our Work Process</h2>
+            		<div class="heder-button">
+            		<button>01</button>
+            		<button>02</button>
+            		<button>03</button>
+            		<button>04</button>
+            		<button>05</button>
+            		</div>
+
+            	</div>
+            </section>
+            
+</body>
+</html>
